@@ -1,0 +1,39 @@
+.nav {
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-decoration: none;
+        color: $c-black;
+        gap: 6px;
+        font-size: $nav-items;
+        position: relative;
+
+        &:after {
+          content: "";
+          height: 1px;
+          width: 100%;
+          background-color: transparent;
+        }
+
+        &:hover {
+          color: $primary-color;
+
+          &:after {
+
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

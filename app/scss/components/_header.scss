@@ -1,0 +1,14 @@
+.header{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+
+  .container{
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  background-color: $c-white;
+padding: 17px 57px 12px 45px;
+  }
+}

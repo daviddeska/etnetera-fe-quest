@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  overflow-x: hidden;
+ margin: 0 auto;
+  padding: 0 1rem;
+
+  @include min-xs {
+    max-width: 100%;
+  }
+
+  @include min-sm {
+    max-width: 540px;
+  }
+
+  @include min-md {
+    max-width: 720px;
+  }
+
+  @include min-lg {
+    max-width: 960px;
+  }
+
+  @include min-xl {
+    max-width: 1140px;
+  }
+
+  @include min-xxl {
+    max-width: 1400px;
+  }
+}
