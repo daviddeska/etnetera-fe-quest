@@ -1,0 +1,44 @@
+.info{
+  .article-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    background-color:$orange-700 ;
+    color:$c-white;
+    @include min-sm {  min-height: 75px;}
+.container-inner{
+ display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  font-size:$fs-base;
+  padding: 10px;
+gap: 10px;
+  @include min-sm {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+
+  }
+  .time-ago{
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+  }
+  .snippet{
+    text-align: center;
+    width: 100%;
+  }
+  .read-more{
+    text-decoration: none;
+    color:$c-white;
+    text-align: center;
+    width: 100%;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+  }
+}

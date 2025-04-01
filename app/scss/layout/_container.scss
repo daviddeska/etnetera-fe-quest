@@ -2,29 +2,24 @@
   width: 100%;
   overflow-x: hidden;
  margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 
-  @include min-xs {
+  @include min-xxs {
     max-width: 100%;
   }
-
-  @include min-sm {
-    max-width: 540px;
-  }
-
-  @include min-md {
-    max-width: 720px;
-  }
-
-  @include min-lg {
-    max-width: 960px;
-  }
-
-  @include min-xl {
-    max-width: 1140px;
-  }
-
   @include min-xxl {
     max-width: 1400px;
+  }
+  .container-inner{
+    width: 100%;
+    margin: 0 auto;
+
+    @include min-xxs {
+      max-width: 80%;
+    }
+
+    @include min-xxl {
+      max-width: 980px;
+    }
   }
 }

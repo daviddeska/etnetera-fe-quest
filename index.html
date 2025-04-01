@@ -2,87 +2,133 @@
 <html lang="cs">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Etnetera FE Quest</title>
-    <link rel="stylesheet" href="dist/style.css" />
-
+    <link rel="stylesheet" href="dist/style.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
+    <div class="container">
+        <a href="/" class="logo"><img alt="logo" src="app/src/logos/logo.svg"></a>
+        <nav class="nav" aria-label="Hlavní navigace">
+            <ul>
+                <li><a href="#">Domů</a></li>
+                <li><a href="#">Kdo jsme</a></li>
+                <li><a href="#">Co děláme</a></li>
+                <li><a href="#">Reference</a></li>
+                <li><a href="#">Práce u nás (4)</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+    <section class="carousel">
         <div class="container">
-            <a href="/" class="logo"><img src="app/src/logos/logo.svg"></a>
-            <nav class="nav" aria-label="Hlavní navigace">
-                <ul>
-                    <li><a href="#">Domů</a></li>
-                    <li><a href="#">Kdo jsme</a></li>
-                    <li><a href="#">Co děláme</a></li>
-                    <li><a href="#">Reference</a></li>
-                    <li><a href="#">Práce u nás</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                </ul>
-            </nav>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide ">
+                        <div class="container-inner">
+                            <span class="slide-title">Přidej se v Etneteře mezi kodéry</span>
+                            <span class="slide-text">Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.</span>
+                            <a href="#" class="btn btn-secondary slide-link">Více o nás</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="container-inner">
+                            <span class="slide-title">Další slide</span>
+                            <span class="slide-text">Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.</span>
+                            <a href="#" class="btn btn-secondary slide-link">Více o tom</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="container-inner">
+                            <span class="slide-title">Další slide</span>
+                            <span class="slide-text">Čeká tě tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s tebou i během práce pokecáme, zajdeme na oběd nebo poradíme s problémem.</span>
+                            <a href="#" class="btn btn-secondary slide-link">Více o tamtom</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Navigace -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+
         </div>
-    </header>
-
-    <main class="main-content">
-        <section class="carousel">
-            <div class="container">
-                <h1>Přidej se v Etneteře mezi kodéry</h1>
-                <p>Čeká tě tým mladých lidí zapálených nejen do kódu. Rádi si s tebou i během práce pokecáme nebo
-                    zajdeme na oběd.</p>
-                <a href="#" class="btn">Více o nás</a>
-            </div>
-        </section>
-
-        <section class="benefits">
-            <div class="container">
-                <h2>Jaké u nás dostaneš benefity?</h2>
-                <ul class="benefits__list">
-                    <li>Stravenková karta, Multisport, příspěvky na vzdělání, dopravu a penzijko</li>
-                    <li>5 týdnů dovolené</li>
-                    <li>Relax zóny a sport</li>
-                    <li>TechLunch s pizzou</li>
-                    <li>Svoboda pracovat odkudkoli</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="about-us">
-            <div class="container">
-                <h2>O lidi se staráme někdy víc než o klienty</h2>
-                <p>Pracujeme v otevřeném prostředí bez kravat a procesních příruček. Inspirujeme se principy svobodné
-                    firmy...</p>
-            </div>
-        </section>
-
-        <section class="graph-section">
-            <div class="container">
-                <h2>Návštěvnost firmy</h2>
-                <div id="attendance-graph"></div> <!-- sem přijde JS graf -->
-            </div>
-        </section>
-
-        <section class="newsletter">
-            <div class="container">
-                <h2>Dostávejte články přímo do e-mailu</h2>
-                <form>
-                    <label for="email">Vaše e-mailová adresa</label>
-                    <input type="email" id="email" name="email" required aria-required="true" />
-                    <button type="submit">Odeslat</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+    </section>
+    <section class="info">
         <div class="container">
-            <p>&copy; 2019 ETNETERA — Jsme hrdým členem Etnetera Group</p>
-        </div>
-    </footer>
+        <div class="article-banner">
 
-    <script src="dist/script.js"></script>
+        <div class="container-inner">
+                <span class="time-ago">Před 12 dny</span>
+                <span class="snippet">Jiří Štěpán z Etnetera Activate poodhalil zákulisí
+vykutálené náborové kampaně.</span>
+                <a href="#" class="read-more">Přečíst </a>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="benefits">
+        <div class="container">
+            <h2>Jaké u nás dostaneš benefity?</h2>
+            <ul class="benefits__list">
+                <li>Stravenková karta, Multisport, příspěvky na vzdělání, dopravu a penzijko</li>
+                <li>5 týdnů dovolené</li>
+                <li>Relax zóny a sport</li>
+                <li>TechLunch s pizzou</li>
+                <li>Svoboda pracovat odkudkoli</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <div class="container">
+            <h2>O lidi se staráme někdy víc než o klienty</h2>
+            <p>Pracujeme v otevřeném prostředí bez kravat a procesních příruček. Inspirujeme se principy svobodné
+                firmy...</p>
+        </div>
+    </section>
+
+    <section class="graph-section">
+        <div class="container">
+            <h2>Návštěvnost firmy</h2>
+            <div id="attendance-graph"></div> <!-- sem přijde JS graf -->
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+
+            <h2>Dostávejte články přímo do e-mailu</h2>
+            <form>
+                <label for="email">Vaše e-mailová adresa</label>
+                <input type="email" id="email" name="email" required aria-required="true"/>
+                <button type="submit">Odeslat</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2019 ETNETERA — Jsme hrdým členem Etnetera Group</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="dist/script.js"></script>
+
 </body>
 
 </html>

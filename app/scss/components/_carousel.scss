@@ -1,5 +1,94 @@
-.carousel{
-  .container{
-background-image: url(#{$urlImg}carousel-bg.jpg);
+.carousel {
+
+  .container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .swiper {
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      background-image: url(#{$urlImg}carousel-bg.jpg);
+      height: 100%;
+      background-size: cover;
+      background-position: top;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      padding-bottom: 40px;
+@include min-xxl {
+  height: 475px;
+  padding-bottom: 0;
+}
+      .swiper-wrapper {
+
+        .swiper-slide {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          > div {
+            display: flex;
+            flex-direction: column;
+
+            .slide {
+              &-title {
+                font-size: $fs-h4;
+                margin: 20px 0 40px 0;
+                @include min-md {
+                  font-size: $fs-h3;
+                  margin: 40px 0 70px 0;
+                }
+              }
+
+              &-text {
+                font-size: $fs-base-plus;
+                margin-bottom: 32px;
+                padding: 0 80px 0 0;
+               @include min-lg{
+                 padding: 0 200px 0 0;
+               }
+                @include min-xl {
+                  font-size: $fs-h6;
+                  margin-bottom: 55px;
+                  padding: 0 300px 0 0;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      .btn-secondary {
+        display: flex;
+        align-self: flex-end;
+        width: fit-content;
+        min-width: 236px;
+        justify-content: center;
+      }
+
+      .swiper-button {
+        &-next, &-prev {
+          color: $c-black
+        }
+        &-next{
+          right: 20px;
+          @include min-xxl {
+            right: 90px;
+          }
+
+        }
+        &-prev{
+          left: 20px;
+          @include min-xxl {
+            left: 90px;
+          }
+        }
+      }
+    }
+
+
   }
 }

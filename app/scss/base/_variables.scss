@@ -4,18 +4,36 @@ $font-stack: "Open Sans", sans-serif;
 //Images
 $urlImg: "../app/src/images/";
 $urlLogos: "../app/src/logos/";
+
 //Font-size
-$fs-base: 16px; // base for 1rem
-$nav-items:18px;
+
+//base (base = 16px)
+$fs-base-plus: 1.125rem; //18px
+$fs-base: 1rem;         // 16px
+$fs-sm: 0.875rem;       // 14px
+$fs-xs: 0.75rem;        // 12px
+$fs-h1: 3.5rem;         // 56px
+$fs-h2: 3rem;           // 48px
+$fs-h3: 2.5rem;         // 40px
+$fs-h4: 2.25rem;        // 36px
+$fs-h5: 1.5rem;         // 24px
+$fs-h6: 1.25rem;        // 20px
+
+
+//components
+$nav-items: $fs-base-plus;
+
 //Colors
 $c-white: #fff;
 $c-black: #000;
 $primary-color: #e84d0f;
+$orange-700: #e74d0d;
 $text-color: #262626;
 
 //Breakpoints
-$breakpoint-xs: 360px;
-$breakpoint-sm: 576px;
+$breakpoint-xxs: 360px;
+$breakpoint-xs: 475px;
+$breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;

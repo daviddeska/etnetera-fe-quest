@@ -1,14 +1,27 @@
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 16px;
   background-color: $primary-color;
-  color: #fff;
+  color: $c-white;
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s;
-
+text-align: center;
   &:hover,
   &:focus {
-    background-color: darken($primary-color, 10%);
+    background-color: $c-white;
+    color: $primary-color;
   }
+  &-secondary{
+  background-color: $c-white;
+    color: $primary-color;
+    border:1px solid $primary-color;
+    border-radius: 40px;
+    font-size: $fs-base;
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      color: $c-white;
+    }
+}
 }

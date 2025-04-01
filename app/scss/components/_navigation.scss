@@ -15,9 +15,15 @@
         text-decoration: none;
         color: $c-black;
         gap: 6px;
-        font-size: $nav-items;
         position: relative;
-
+        text-transform: uppercase;
+        font-size: $fs-sm;
+  @include min-xl{
+    font-size: $fs-base;
+  }
+        @include min-xxl{
+          font-size: $nav-items;
+        }
         &:after {
           content: "";
           height: 1px;
