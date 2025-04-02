@@ -1,0 +1,14 @@
+.requirements-and-benefits{
+.container{
+  display: flex;
+  position: relative;
+  .container-inner{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include min-lg{
+   display:grid;f
+    }
+  }
+}
+}

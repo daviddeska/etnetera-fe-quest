@@ -1,0 +1,48 @@
+article {
+  &.article-content {
+    display:block;
+    position: relative;
+    a {
+      color: $orange-600;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      margin: 0 0 28px 0;
+      line-height: 150%;
+    }
+    h4{
+      margin: 0 0 9px 0;
+      font-weight: $fw-normal;
+    }
+    .text-image {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @include min-md {
+        flex-direction: row;
+        align-items: flex-start;
+
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        width: 100%;
+
+        @include min-md {
+          max-width: 325px;
+        }
+      }
+
+      p {
+        flex: 1;
+      }
+    }
+  }
+}

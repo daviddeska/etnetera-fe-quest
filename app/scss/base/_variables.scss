@@ -4,7 +4,7 @@ $font-stack: "Open Sans", sans-serif;
 //Images
 $urlImg: "../app/src/images/";
 $urlLogos: "../app/src/logos/";
-
+$urlIcons: "../app/src/icons/";
 //Font-size
 
 //base (base = 16px)
@@ -19,16 +19,33 @@ $fs-h4: 2.25rem;        // 36px
 $fs-h5: 1.5rem;         // 24px
 $fs-h6: 1.25rem;        // 20px
 
-
-//components
-$nav-items: $fs-base-plus;
+//font-weight
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semibold: 500;
+$fw-bold: 600;
+$fw-extra-bold: 900;
 
 //Colors
 $c-white: #fff;
+$c-white-100:#f1f1f1;
 $c-black: #000;
+$c-gray-700:#262626;
+$c-gray-400:#454545;
+
 $primary-color: #e84d0f;
+$orange-600:#e84e0e;
 $orange-700: #e74d0d;
-$text-color: #262626;
+
+//components
+$nav-items: $fs-base-plus;
+$tooltip-gray:$c-gray-400;
+$text-color: $c-gray-700;
+$graph-labels:$c-gray-400;
+$graph-low:#fed7aa;
+$graph-medium:#fb923c;
+$graph-hight:#f87171;
+
 
 //Breakpoints
 $breakpoint-xxs: 360px;
