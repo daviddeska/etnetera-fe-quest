@@ -15,16 +15,19 @@ display:block;
       background-image: url(#{$urlImg}carousel-bg.jpg);
       height: 100%;
       background-size: cover;
-      background-position: top;
+      background-position: center;
       overflow: hidden;
       background-repeat: no-repeat;
       padding-bottom: 40px;
+      @include min-md{
+        background-position: top;
+      }
 @include min-xxl {
   height: 475px;
   padding-bottom: 0;
 }
       .swiper-wrapper {
-
+        align-items: center;
         .swiper-slide {
           display: flex;
           align-items: center;
@@ -35,8 +38,8 @@ display:block;
 
             .slide {
               &-title {
-                font-size: $fs-h4;
-                margin: 20px 0 40px 0;
+                font-size: $fs-h6;
+                margin: 20px 0 20px 0;
                 @include min-md {
                   font-size: $fs-h3;
                   margin: 40px 0 70px 0;
@@ -44,11 +47,14 @@ display:block;
               }
 
               &-text {
-                font-size: $fs-base-plus;
-                margin-bottom: 32px;
-                padding: 0 80px 0 0;
+                font-size: $fs-sm;
+                margin-bottom: 20px;
+                padding: 0;
                @include min-lg{
+                 padding: 0 80px 0 0;
+                 font-size: $fs-base-plus;
                  padding: 0 200px 0 0;
+                 margin-bottom: 32px;
                }
                 @include min-xl {
                   font-size: $fs-h6;
@@ -66,8 +72,11 @@ display:block;
         display: flex;
         align-self: flex-end;
         width: fit-content;
-        min-width: 236px;
+        min-width: 150px;
         justify-content: center;
+        @include min-md{
+          min-width: 236px;
+        }
       }
 
       .swiper-button {
@@ -75,14 +84,20 @@ display:block;
           color: $c-black
         }
         &-next{
-          right: 20px;
+          right: 0;
+         @include min-md{
+           right: 20px;
+         }
           @include min-xxl {
             right: 90px;
           }
 
         }
         &-prev{
-          left: 20px;
+          left: 0;
+          @include min-md{
+            left: 20px;
+          }
           @include min-xxl {
             left: 90px;
           }

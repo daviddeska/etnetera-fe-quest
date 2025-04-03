@@ -14,12 +14,13 @@
         flex-wrap: wrap;
         text-decoration: none;
         color: $c-black;
-        gap: 6px;
+        gap: 2px;
         position: relative;
         text-transform: uppercase;
-        font-size: $fs-sm;
+        font-size: $fs-h6;
   @include min-xl{
     font-size: $fs-base;
+    gap:6px
   }
         @include min-xxl{
           font-size: $nav-items;

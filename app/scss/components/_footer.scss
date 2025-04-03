@@ -1,0 +1,19 @@
+.footer{
+  .container{
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: $fs-sm;
+    font-weight: $fw-bold;
+    .copyright{
+      text-transform: uppercase;
+      color:$primary-color;
+    }
+    .partner{
+      .group{
+      color:$primary-color;
+      }
+    }
+  }
+}

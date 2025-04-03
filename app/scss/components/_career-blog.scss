@@ -1,0 +1,52 @@
+.career-blog{
+
+    .container{
+      display: flex;
+      position: relative;
+      .container-inner{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        @include min-lg{
+          display:grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap:42px;
+        }
+        .box{
+          padding:52px 21px 27px 21px ;
+
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          &:nth-child(2){
+            background-color: $c-black;
+            color:$c-white;
+          }
+          .box-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            .p-top{
+            h3{
+              margin: 0 0 27px 0;
+              text-align: center;
+              line-height: 120%;
+            }
+            p{
+              text-align: center;
+            }
+            }
+            .p-bottom{
+              display: flex;
+              justify-content: space-between;
+              .date,
+              .hashtag{
+                font-size: $fs-sm;
+                font-weight: $fw-bold;
+              }
+              .hashtag{color:$orange-600}
+            }
+          }
+        }
+}}}

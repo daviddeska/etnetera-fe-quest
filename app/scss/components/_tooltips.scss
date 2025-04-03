@@ -7,11 +7,13 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -6px;
+    bottom: 0;
     left: 0;
     width: 100%;
     border-bottom: 1px dashed $orange-600;
-
+@include min-md{
+  bottom: -6px;
+}
   }
   .tooltip-box {
     visibility: hidden;

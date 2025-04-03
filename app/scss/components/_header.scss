@@ -1,14 +1,114 @@
-.header{
+.header {
   display: flex;
   position: relative;
   flex-wrap: wrap;
-
-  .container{
-  display: flex;
-  align-items: center;
-
-  justify-content: space-between;
+  position: fixed;
   background-color: $c-white;
-padding: 17px 57px 12px 45px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  top: 0;
+  width: 100%;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 17px 20px 12px 20px;
+    justify-content: space-between;
+    background-color: $c-white;
+    @include min-md {
+    padding: 17px 57px 12px 45px;
+    }
+    .logo {
+      img {
+        height: 50px;
+      }
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+
+      span {
+        width: 24px;
+        height: 2px;
+        background: #000;
+        transition: all 0.3s ease;
+      }
+
+      &.open {
+        span:nth-child(1) {
+          transform: rotate(45deg) translateY(7px);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: rotate(-45deg) translateY(-7px);
+        }
+      }
+    }
+
+    .nav {
+      ul {
+        display: flex;
+        gap: 24px;
+
+        li {
+          a {
+            text-decoration: none;
+            color: #000;
+          }
+        }
+      }
+
+      @include max-md {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+
+        ul {
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        &.active {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    @include max-md{
+      .hamburger {
+        display: flex;
+      }
+
+      .nav ul {
+        display: none;
+      }
+
+      .nav.active ul {
+        display: flex;
+      }
+    }
   }
 }

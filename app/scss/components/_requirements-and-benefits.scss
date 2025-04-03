@@ -7,7 +7,61 @@
     flex-wrap: wrap;
     flex-direction: column;
     @include min-lg{
-   display:grid;f
+   display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:60px;
+    }
+    h4{
+      font-weight: $fw-normal;
+      margin-bottom: 9px;
+    }
+    .requirements-wrapper{
+      .requirements-list {
+        list-style: none;
+        padding-left: 0;
+
+        .requirements-item {
+          position: relative;
+          padding-left: 52px;
+          margin-bottom: 20px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            height: 18px;
+            width: 24px;
+         background-image: url(#{$urlIcons}check.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+    }
+    .benefits-wrapper{
+      .benefits-list {
+        list-style: none;
+        counter-reset: benefit-counter;
+        padding-left: 0;
+
+        .benefits-item {
+          counter-increment: benefit-counter;
+          position: relative;
+          margin-bottom: 16px;
+          padding-left: 52px;
+
+          &::before {
+            content: counter(benefit-counter) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $primary-color;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }

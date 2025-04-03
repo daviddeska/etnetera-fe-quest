@@ -1,7 +1,17 @@
 .home{
+  .main-content{
+    @include max-xl{
+    padding-top: 84px;
+    }
+  }
   .middle-part{
     >.container{
 background-color: $c-white-100;
     padding: 52px 0 66px 0;
-  }}
+  }
+
+  }
+  .bottom-part{
+    padding: 52px 0 66px 0;
+  }
 }

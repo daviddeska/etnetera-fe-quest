@@ -29,9 +29,12 @@ $fw-extra-bold: 900;
 //Colors
 $c-white: #fff;
 $c-white-100:#f1f1f1;
+
 $c-black: #000;
-$c-gray-700:#262626;
+$c-gray-200: #ccc;
+$c-gray-300: #666;
 $c-gray-400:#454545;
+$c-gray-700:#262626;
 
 $primary-color: #e84d0f;
 $orange-600:#e84e0e;
@@ -44,8 +47,9 @@ $text-color: $c-gray-700;
 $graph-labels:$c-gray-400;
 $graph-low:#fed7aa;
 $graph-medium:#fb923c;
-$graph-hight:#f87171;
-
+$graph-high:#f87171;
+$color-subtle: $c-gray-300;
+$color-border:$c-gray-200;
 
 //Breakpoints
 $breakpoint-xxs: 360px;

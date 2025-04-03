@@ -13,10 +13,8 @@
   .container-inner{
     width: 100%;
     margin: 0 auto;
+    max-width: 80%;
 
-    @include min-xxs {
-      max-width: 80%;
-    }
 
     @include min-xxl {
       max-width: 980px;

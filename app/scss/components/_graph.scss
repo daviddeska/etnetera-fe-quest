@@ -7,111 +7,127 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-.graph-inner{
-    .attendance-chart {
-      display: flex;
-      align-items: flex-end;
-      gap: 0;
-      height: 80px;
-      position: relative;
-      overflow: visible;
-      &:before{
 
-        background-image:url(#{$urlIcons}etnetera-flame.svg) ;
-        content: "";
-        height: 50px;
-        width: 30px;
-        position: relative;
-        top: -20px;
-        margin-right: 15px;
-        align-self: flex-start;
-
-      }
-      &:after{
-
-        background-image:url(#{$urlIcons}clock.svg) ;
-        content: "";
-        height: 20px;
-        width: 20px;
-        position: absolute;
-        background-size: cover;
-        background-repeat: no-repeat;
-        left: 3px;
-        align-self: flex-start;
-top:70%;
-      }
-    }
-
-    .bar-group {
+    .graph-inner {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 17px;
-      position: relative;
-      overflow: visible;
-      z-index: 1;
-      gap: 15px;
-
-    }
-
-    .bar {
-      width: 17px;
-      border-radius: 25px 25px 0 0;
-      transition: transform 0.2s linear;
-      position: relative;
-      background-color: #ffc59b;
-      z-index: 2;
-
-
-    }
-
-    .bar-label {
-      height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-size: $fs-sm;
-      color: $graph-labels;
-    }
-
-    // Legend styles
-    .legend {
-      display: flex;
-      gap: 24px;
-      margin-top: 36px;
-      font-size: $fs-sm;
-      align-items: center;
-      margin-left: 45px;
-    }
-
-    .legend-item {
-      display: flex;
+      justify-content: center;
       align-items: center;
 
-      &::before {
-        content: "";
-        display: inline-flex;
+      @include min-lg {
+        align-items: flex-start
+      }
+
+      .attendance-chart {
+        display: flex;
+        align-items: flex-end;
+        gap: 0;
+        height: 80px;
+        position: relative;
+        overflow: visible;
+
+        &:before {
+          background-image: url(#{$urlIcons}etnetera-flame.svg);
+          content: "";
+          height: 50px;
+          width: 30px;
+          position: relative;
+          top: -20px;
+          margin-right: 15px;
+          align-self: flex-start;
+        }
+
+        &:after {
+          background-image: url(#{$urlIcons}clock.svg);
+          content: "";
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          left: 3px;
+          align-self: flex-start;
+          top: 70%;
+        }
+      }
+
+      .bar-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 17px;
-        height: 17px;
-        border-radius: 50%;
-        margin-right: 6px;
-        vertical-align: middle;
+        position: relative;
+        overflow: visible;
+        z-index: 1;
+        gap: 15px;
       }
 
-      &.low::before {
+      .bar {
+        width: 17px;
+        border-radius: 25px 25px 0 0;
+        transition: transform 0.2s linear;
+        position: relative;
         background-color: $graph-low;
+        z-index: 2;
       }
 
-      &.medium::before {
-        background-color: $graph-medium;
+      .bar-label {
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: $fs-sm;
+        color: $graph-labels;
       }
 
-      &.high::before {
-        background-color: $graph-hight;
+      // Legend styles
+      .legend {
+        display: flex;
+        gap: 24px;
+        margin-top: 36px;
+        font-size: $fs-sm;
+        align-items: flex-start;
+        margin-left: 45px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column;
+        @include min-sm {
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+        }
       }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          display: inline-flex;
+          width: 17px;
+          height: 17px;
+          border-radius: 50%;
+          margin-right: 6px;
+          vertical-align: middle;
+        }
+
+        &.low::before {
+          background-color: $graph-low;
+        }
+
+        &.medium::before {
+          background-color: $graph-medium;
+        }
+
+        &.high::before {
+          background-color: $graph-high;
+        }
+      }
+
+
     }
-  }
   }
 }

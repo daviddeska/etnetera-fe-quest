@@ -8,13 +8,20 @@
     <title>Etnetera FE Quest</title>
     <link rel="stylesheet" href="dist/style.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 
 <body class="home">
-<header class="header">
+<a href="#main" class="visually-hidden focusable">Přeskočit na hlavní obsah</a>
+<header class="header" id="siteHeader" role="banner">
     <div class="container">
-        <a href="/" class="logo"><img alt="logo" src="app/src/logos/logo.svg"></a>
-        <nav class="nav" aria-label="Hlavní navigace">
+        <a href="/" class="logo">
+            <img alt="logo Etnetera" src="app/src/logos/logo.svg" />
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Otevřít navigaci" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Hlavní navigace" id="mainNav" role="navigation">
             <ul>
                 <li><a href="#">Domů</a></li>
                 <li><a href="#">Kdo jsme</a></li>
@@ -27,7 +34,7 @@
     </div>
 </header>
 
-<main class="main-content">
+<main class="main-content" role="main" id="main">
     <div class="top-part">
         <div class="container">
             <section class="carousel">
@@ -145,78 +152,137 @@
             <section class="requirements-and-benefits">
                 <div class="container">
                     <div class="container-inner">
-                    <div class="requirements-wrapper">
-                        <h4 class="title">Chceš být naším parťákem?</h4>
-                        <span class="subtitle">Měl(a) bys:</span>
-                        <ul class="requirements-list">
-                            <li class="requirements-item">Žít HTML5, CSS3. Doslova.Tento jazyk Ti občas připadá přirozenější než čeština.</li>
-                            <li class="requirements-item">Znát Javascript.</li>
-                            <li class="requirements-item">Nad pojmy ES6/7, React a Redux bys neměl bezradně krčit rameny, ale bezpečně je znát.</li>
-                            <li class="requirements-item">Node.js je Tvůj dobrý kamarád, který používáš při buildování</li>
-                            <li class="requirements-item">Velkou výhodu představují dobré vztahy s dalšími JS frameworky. Tzn. pokud si tykáš třeba s Angular, Vue.js či Vanilla JS.</li>
-                            <li class="requirements-item">Uvedené technologie Tě zajímají, ale nemáš s nimi moc zkušeností? Nevadí, stav se k nám na kafe, probereme, co se s tím dá dělat.</li>
-                        </ul>
-                    </div>
-                    <div class="benefits-wrapper">
-                        <h4 class="title">Co za to dostaneš?</h4>
-                        <span class="subtitle">Budeme si tě hýčkat např.:</span>
-                        <ul class="benefits-list">
-                            <li class="benefits-item">Komfortním pracovním prostředím, které je unikátní kombinací kanceláří, tělocvičny, odpočinkových prostor a kavárny. U nás se strohé prostředí a nažehlené límečky fakt nenosí.</li>
-                            <li class="benefits-item">Pestrým koktejlem takových těch typických benefitů jako jsou třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a další.</li>
-                            <li class="benefits-item">Možností pořádně si oddychnout. Nejen v našich relaxačních prostorech, ale třeba na pláži v exotice. Díky 5 týdnům placené dovolené.</li>
-                            <li class="benefits-item">Inspirativním prostředím plným zajímavých lidí, které stojí za to poznat. Organizujeme pravidelné TechLunche, kdy nad lahodnou pizzou sdílíme naše nové poznatky a vědomosti.</li>
-                            <li class="benefits-item">A hlavně… svobodou!!! Budeme rádi, pokud s námi budeš v kanceláři, ale rozumíme tomu, že někdy budeš chtít pracovat i odjinud. Zároveň chápeme, že každému z nás vyhovuje jiná pracovní doba a zařízení, na kterém pracuje. Pojďme se pobavit o tvých preferencích, určitě se domluvíme.</li>
+                        <div class="requirements-wrapper">
+                            <h4 class="title">Chceš být naším parťákem?</h4>
+                            <span class="subtitle">Měl(a) bys:</span>
+                            <ul class="requirements-list">
+                                <li class="requirements-item">Žít HTML5, CSS3. Doslova.Tento jazyk Ti občas připadá
+                                    přirozenější než čeština.
+                                </li>
+                                <li class="requirements-item">Znát Javascript.</li>
+                                <li class="requirements-item">Nad pojmy ES6/7, React a Redux bys neměl bezradně krčit
+                                    rameny, ale bezpečně je znát.
+                                </li>
+                                <li class="requirements-item">Node.js je Tvůj dobrý kamarád, který používáš při
+                                    buildování
+                                </li>
+                                <li class="requirements-item">Velkou výhodu představují dobré vztahy s dalšími JS
+                                    frameworky. Tzn. pokud si tykáš třeba s Angular, Vue.js či Vanilla JS.
+                                </li>
+                                <li class="requirements-item">Uvedené technologie Tě zajímají, ale nemáš s nimi moc
+                                    zkušeností? Nevadí, stav se k nám na kafe, probereme, co se s tím dá dělat.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefits-wrapper">
+                            <h4 class="title">Co za to dostaneš?</h4>
+                            <span class="subtitle">Budeme si tě hýčkat např.:</span>
+                            <ul class="benefits-list">
+                                <li class="benefits-item">Komfortním pracovním prostředím, které je unikátní kombinací
+                                    kanceláří, tělocvičny, odpočinkových prostor a kavárny. U nás se strohé prostředí a
+                                    nažehlené límečky fakt nenosí.
+                                </li>
+                                <li class="benefits-item">Pestrým koktejlem takových těch typických benefitů jako jsou
+                                    třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a
+                                    další.
+                                </li>
+                                <li class="benefits-item">Možností pořádně si oddychnout. Nejen v našich relaxačních
+                                    prostorech, ale třeba na pláži v exotice. Díky 5 týdnům placené dovolené.
+                                </li>
+                                <li class="benefits-item">Inspirativním prostředím plným zajímavých lidí, které stojí za
+                                    to poznat. Organizujeme pravidelné TechLunche, kdy nad lahodnou pizzou sdílíme naše
+                                    nové poznatky a vědomosti.
+                                </li>
+                                <li class="benefits-item">A hlavně… svobodou!!! Budeme rádi, pokud s námi budeš v
+                                    kanceláři, ale rozumíme tomu, že někdy budeš chtít pracovat i odjinud. Zároveň
+                                    chápeme, že každému z nás vyhovuje jiná pracovní doba a zařízení, na kterém pracuje.
+                                    Pojďme se pobavit o tvých preferencích, určitě se domluvíme.
+                                </li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </div></div>
+                </div>
             </section>
         </div>
     </div>
     <div class="bottom-part">
         <div class="container">
-            <section class="benefits">
-                <div class="container">
-                    <h2>Jaké u nás dostaneš benefity?</h2>
-                    <ul class="benefits__list">
-                        <li>Stravenková karta, Multisport, příspěvky na vzdělání, dopravu a penzijko</li>
-                        <li>5 týdnů dovolené</li>
-                        <li>Relax zóny a sport</li>
-                        <li>TechLunch s pizzou</li>
-                        <li>Svoboda pracovat odkudkoli</li>
-                    </ul>
+        <section class="career-blog">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="p-top"><h3>Sdílení vědomostí</h3>
+                                <p>Inspirativní prostředí plné zajímavých lidí, které stojí za to poznat. Organizujeme
+                                    pravidelné TechLunche, kdy nad lahodnou pizzou sdílíme naše nové poznatky a
+                                    vědomosti.</p>
+                            </div>
+                            <div class="p-bottom">
+                                <span class="date">11.ledna</span>
+                                <span class="hashtag">#entplesk</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="p-top"><h3>O lidi se staráme někdy víc než o klienty</h3>
+                                <p>Komfortní pracovní prostředí, které je unikátní kombinací kanceláří, tělocvičny, odpočinkových prostor a kavárny. U nás se strohé prostředí a nažehlené límečky fakt nenosí.</p>
+                            </div>
+                            <div class="p-bottom">
+                                <span class="date">12.ledna</span>
+                                <span class="hashtag">#entplesk</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="p-top"><h3>Jaké u nás dostaneš benefity?</h3>
+                                <p>Pestrým koktejlem takových těch typických benefitů jako jsou třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a penzijní pojištění.</p>
+                            </div>
+                            <div class="p-bottom">
+                                <span class="date">13.ledna</span>
+                                <span class="hashtag">#entplesk</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-
-            <section class="about-us">
-                <div class="container">
-                    <h2>O lidi se staráme někdy víc než o klienty</h2>
-                    <p>Pracujeme v otevřeném prostředí bez kravat a procesních příruček. Inspirujeme se principy
-                        svobodné
-                        firmy...</p>
-                </div>
-            </section>
-
-        </div>
+            </div>
+        </section>
     </div>
-
+    </div>
 </main>
 <div class="newsletter-widget">
-    <div class="container">
+    <button class="newsletter-toggle" id="newsletterToggle" aria-label="Otevřít newsletter formulář">
+        <span class="visually-hidden">Otevřít newsletter formulář</span> ✉️
+    </button>
 
-        <h2>Dostávejte články přímo do e-mailu</h2>
-        <form>
-            <label for="email">Vaše e-mailová adresa</label>
-            <input type="email" id="email" name="email" required aria-required="true"/>
-            <button type="submit">Odeslat</button>
+    <div class="newsletter-popup" id="newsletterPopup" role="dialog" aria-labelledby="newsletterTitle" aria-modal="true">
+        <button class="close-popup" id="closePopup" aria-label="Zavřít newsletter">✕</button>
+        <h2 id="newsletterTitle">Dostávejte články přímo<br>do vaší e-mailové schránky!</h2>
+
+        <form id="newsletterForm" role="form">
+            <label for="emailInput">Vaše e-mailová adresa</label>
+            <input type="email" id="emailInput" name="email" required placeholder="email@example.com" />
+            <button type="submit" id="submitBtn">Odeslat</button>
         </form>
+
+        <div id="confirmationMessage" class="hidden" aria-live="polite">Odesláno ✅</div>
+
+        <p class="privacy">
+            Podmínky zpracování osobních údajů („Podmínky“) poskytují informace o shromažďování, zaznamenání, používání a jiného zpracování osobních údajů společností Etnetera a.s. se sídlem Jankovcova 1037/49, 170 00 Praha 7, IČO: 25103814, zapsána u MS Praha, sp.zn. B 11168, jakožto správcem osobních údajů.
+        </p>
     </div>
 </div>
-<footer class="footer">
+
+<footer class="footer" role="contentinfo">
     <div class="container">
-        <p>&copy; 2019 ETNETERA — Jsme hrdým členem Etnetera Group</p>
+        <span class="copyright">Copyright</span>
+        <p>&copy; 2019 ETNETERA </p>
+        <p class="partner">Jsme hrdým členem <span class="group">Etnetera Group</span></p>
     </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="dist/script.js"></script>
 
